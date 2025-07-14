@@ -1,0 +1,27 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+
+int main(){
+// min max of the number
+
+    int n;
+    cout<<"enter number";
+    cin>>n;
+    
+    int arr[n];
+     cout<<"enter array";
+     for(int i = 0;i<n;i++){
+        cin>>arr[i];
+     }
+
+    int len = sizeof(arr)/sizeof(arr[0]);
+
+    int maxVal = *max_element(arr, arr + len);
+    int minVal = *min_element(arr, arr + len);
+
+    cout << "Maximum value: " << maxVal << endl;
+    cout << "Minimum value: " << minVal << endl;
+return 0;
+}
