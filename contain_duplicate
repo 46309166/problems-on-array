@@ -1,0 +1,42 @@
+//CONTAINS DUPLICATE 
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"enter number"<<endl;
+    cin>>n;
+ int arr[n];
+
+ int len = sizeof(arr)/sizeof(arr[0]);
+    cout<<"enter the array";
+    for(int i = 0; i<n;i++){
+        cin>>arr[i];
+    }
+
+   cout<<"printed array is : ";
+
+  for(int i = 0; i<n;i++){
+       cout<<arr[i]<<" ";
+     }
+
+ cout<<"subarray are : ";
+  int subarray = (n*(n+1))/2;
+  cout<<subarray;
+ for (int i = 0; i < n; i++) {
+     bool found = false;
+   for (int j = i + 1; j < n; j++) {
+       if (arr[i] == arr[j]) {
+          cout << "true ";
+            break;
+      }
+    }
+if (!found) {
+    cout << "false ";
+ }
+ }
+
+ return 0;
+
+}
