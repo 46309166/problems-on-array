@@ -1,23 +1,33 @@
- //REVERSE ARRAY
 
-//     int n;
-//     cout<<"enter number"<<endl;
-//     cin>>n;
-//  int arr[n];
+#include<iostream>
+#include<algorithm>
+using namespace std;
 
-//  int len = sizeof(arr)/sizeof(arr[0]);
-//     cout<<"enter the array";
-//     for(int i = 0; i<n;i++){
-//         cin>>arr[i];
-//     }
+// min max of the number
 
-//     cout<<"printed array is : ";
+int main(){
 
-//  for(int i = 0; i<n;i++){
-//         cout<<arr[i]<<" ";
-//     }
+     int n;
+    cout<<"enter number"<<endl;
+    cin>>n;
+    int arr[n];
 
-//     cout<<"reverse array is :";
-//     for(int i=(len-1);i>=0;i--){
-//         cout<<arr[i]<<" ";
-//     }
+     int len = sizeof(arr)/sizeof(arr[0]);
+     cout<<"enter the array";
+     for(int i = 0; i<n;i++){
+         cin>>arr[i];
+    }
+
+    cout<<"printed array is : ";
+
+  for(int i = 0; i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+    cout<<"reverse array is :";
+     for(int i=(len-1);i>=0;i--){
+        cout<<arr[i]<<" ";
+     }
+return 0;
+}
+
