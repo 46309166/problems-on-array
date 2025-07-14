@@ -1,0 +1,78 @@
+#include<iostream>
+#include<algorithm>
+#include <climits>   // C++ style
+
+using namespace std;
+
+int main(){
+
+    int arr[5] = {1,2,3,4,5};
+
+    int len = sizeof(arr)/sizeof(arr[0]);
+
+
+    // subarray of given array is 
+
+    // for(int st = 0; st<len; st++){
+
+    //     for(int end = st;end < len; end++){
+
+    //       for(int i = st;i<=end;i++){
+
+    //         cout<<arr[i];
+
+    //       }
+    //       cout<<" ";
+
+    //     }
+
+    //     cout<<endl;
+
+    // }
+
+
+    //brute force algorithm
+
+    // int maxSum = INT_MIN;
+     
+    // for(int st = 0; st<len; st++){
+
+    //     int  current_val=0;
+
+    //     for(int end = st;end < len; end++){
+
+    //         current_val += arr[end];
+
+    //         maxSum = max(current_val , maxSum); 
+        
+    //     }
+
+    // }
+    //  cout<<"max subarray sum = "<<maxSum<<endl;
+
+
+
+     //kadane's algorithm
+
+ 
+
+      int maxSum = INT_MIN;
+       int current_val = 0;
+
+     for(int i =0 ; i< len; i++){
+     
+       current_val += arr[i];
+
+        maxSum = max(current_val , maxSum);
+
+        if(current_val < 0){
+
+      current_val = 0;
+
+        }
+     }
+
+     cout<< "print max sum of subarray = "<<maxSum<<endl;
+
+    return 0;
+}
